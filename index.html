@@ -24,6 +24,9 @@
       img.contain-fit{
         object-fit: contain;
       }
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
     <title>OrmaHealth</title>
   </head>
@@ -35,7 +38,7 @@
       <div class="container">
 
         <!-- Brand -->
-        <a class="navbar-brand" href="./index.html">
+        <a class="navbar-brand" href="#">
           <img src="./assets/img/logo.png" class="navbar-brand-img" alt="...">
         </a>
 
@@ -55,17 +58,17 @@
           <!-- Navigation -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link" href="#solutions" aria-haspopup="true" aria-expanded="false">
                 Solutions
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link" href="#services" aria-haspopup="true" aria-expanded="false">
                 Services
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link" href="#faqs" aria-haspopup="true" aria-expanded="false">
                 FAQs
               </a>
             </li>
@@ -84,7 +87,7 @@
 
     <!-- WELCOME
     ================================================== -->
-    <section class="pt-4 pt-md-11">
+    <section class="pt-4 pt-md-11" id="home">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12 col-md-5 col-lg-6 order-md-2">
@@ -103,7 +106,7 @@
 
             <!-- Text -->
             <p class="lead text-center text-md-left text-muted mb-6 mb-lg-8">
-              with the most accessible and easy-to-use Remote Patient Monitoring and Telehealth solutions.
+              with the most accessible and easy-to-use Remote Patient Monitoring (RPM) and Telehealth solutions.
             </p>
 
             <!-- Buttons -->
@@ -111,7 +114,7 @@
               <a href="overview.html" class="btn btn-primary shadow lift mr-1">
                 See a Demo <i class="fe fe-arrow-right d-none d-md-inline ml-3"></i>
               </a>
-              <a href="docs/index.html" class="btn btn-primary-soft lift">
+              <a href="#faqs" class="btn btn-primary-soft lift">
                 What is RPM?
               </a>
             </div>
@@ -158,7 +161,7 @@
 
             <!-- Text -->
             <p class="text-muted mb-6 mb-md-0">
-              No installation/integration is needed. You sign up, then you can connect and use our secure cloud-based solutions.
+              No installation/integration is needed. You sign up, then you can instantly connect to our secure cloud-based solutions.
             </p>
 
           </div>
@@ -176,7 +179,7 @@
 
             <!-- Text -->
             <p class="text-muted mb-0">
-              Our solutions are fully HIPAA compliant, and your data is safe with us. We take security and privacy very seriously.
+              Our solutions are fully HIPAA compliant, and your data is safe with us. Security and privacy our top priority.
             </p>
 
           </div>
@@ -195,17 +198,18 @@
             <!-- Heading -->
             <h2>
               The simplest RPM solutions <br>
-              <span class="text-success">ever created for <span data-toggle="typed" data-options='{"strings": ["doctors.", "patients.", "administrators."]}'></span></span>
+              <span class="text-success">ever created for <span data-toggle="typed" data-options='{"strings": ["providers.", "patients.", "payers."]}'></span></span>
             </h2>
 
             <!-- Text -->
             <p class="font-size-lg text-muted mb-6">
-              [TBD] Using Landkit to build your site means never worrying about designing another page or cross browser compatibility. Our ever-growing library of components and pre-designed layouts will make your life easier.
+              Do not worry about installation, integration, maintenance, and trouble shootings for your RPM/Telehealth programs.<br/>
+              With Orma Health, it will be just smooth:
             </p>
 
             <!-- List -->
             <div class="row">
-              <div class="col-12 col-lg-6">
+              <div class="col-12 col-lg-12">
 
                 <!-- Item -->
                 <div class="d-flex">
@@ -217,7 +221,7 @@
 
                   <!-- Text -->
                   <p class="text-success">
-                    Lifetime updates
+                    Automated Device Shipping
                   </p>
 
                 </div>
@@ -230,14 +234,14 @@
                     <i class="fe fe-check"></i>
                   </div>
 
-                  <p class="text-success mb-lg-0">
-                    Tons of assets
+                  <p class="text-success">
+                    Automated Battery Replacement
                   </p>
 
                 </div>
 
-              </div>
-              <div class="col-12 col-lg-6 mb-6 mb-md-0">
+             <!--</div>
+              <div class="col-12 col-lg-6 mb-6 mb-md-0">-->
 
                 <!-- Item -->
                 <div class="d-flex">
@@ -249,7 +253,7 @@
 
                   <!-- Text -->
                   <p class="text-success">
-                    Tech support
+                    Customizable Reminders for Patients
                   </p>
 
                 </div>
@@ -264,7 +268,7 @@
 
                   <!-- Text -->
                   <p class="text-success mb-0">
-                    Integration ready
+                    Customizable Alerts for Doctors
                   </p>
 
                 </div>
@@ -323,38 +327,17 @@
 
             <!-- Heading -->
             <h2>
-              We have lots of experience <br>
-              <span class="text-primary">building healthcare solutions</span>.
+              We are experts in building<br>
+              <span class="text-primary">innovative health technologies</span>.
             </h2>
 
             <!-- Text -->
             <p class="font-size-lg text-muted mb-6">
-              [TBD] We've built well over a dozen Bootstrap themes and sold tens of thousands of copies.
+              Orma Health is founded by industry-leading experts in government programs and data analytics, 
+              who have built and operated many successful companies in the past.
             </p>
 
             <!-- List -->
-            <div class="d-flex">
-
-              <!-- Icon -->
-              <div class="icon text-primary">
-                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M12 8H8a4 4 0 00-4 4v1a3 3 0 003 3v2a5 5 0 01-5-5v-1a6 6 0 016-6h4V4.728a.5.5 0 01.8-.4l2.856 2.133a.5.5 0 01-.001.802l-2.857 2.121A.5.5 0 0112 8.983V8z" fill="#335EEA"/><path d="M12.058 16H16a4 4 0 004-4v-1a3 3 0 00-3-3V6a5 5 0 015 5v1a6 6 0 01-6 6h-3.942v.983a.5.5 0 01-.798.401l-2.857-2.12a.5.5 0 010-.803l2.856-2.134a.5.5 0 01.8.401V16z" fill="#335EEA" opacity=".3"/></g></svg>
-              </div>
-
-              <div class="ml-5">
-
-                <!-- Heading -->
-                <h4 class="mb-1">
-                  [TBD] Bootstrap users since the beginning
-                </h4>
-
-                <!-- Text -->
-                <p class="text-muted mb-6">
-                  [TBD] We've been developing with Bootstrap since it was publicly released in 2011.
-                </p>
-
-              </div>
-
-            </div>
             <div class="d-flex">
 
               <!-- Icon -->
@@ -366,12 +349,36 @@
 
                 <!-- Heading -->
                 <h4 class="mb-1">
-                  [TBD] Deep understanding of Bootstrap
+                  Deep understanding of healthcare
+                </h4>
+
+                <!-- Text -->
+                <p class="text-muted mb-6">
+                  We understand the ins-and-outs of healthcare data and regulatory compliance.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="d-flex">
+
+              <!-- Icon -->
+              <div class="icon text-primary">
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M12 8H8a4 4 0 00-4 4v1a3 3 0 003 3v2a5 5 0 01-5-5v-1a6 6 0 016-6h4V4.728a.5.5 0 01.8-.4l2.856 2.133a.5.5 0 01-.001.802l-2.857 2.121A.5.5 0 0112 8.983V8z" fill="#335EEA"/><path d="M12.058 16H16a4 4 0 004-4v-1a3 3 0 00-3-3V6a5 5 0 015 5v1a6 6 0 01-6 6h-3.942v.983a.5.5 0 01-.798.401l-2.857-2.12a.5.5 0 010-.803l2.856-2.134a.5.5 0 01.8.401V16z" fill="#335EEA" opacity=".3"/></g></svg>
+              </div>
+
+              <div class="ml-5">
+
+                <!-- Heading -->
+                <h4 class="mb-1">
+                  Rapid customization
                 </h4>
 
                 <!-- Text -->
                 <p class="text-muted mb-6 mb-md-0">
-                  [TBD] We've watched Bootstrap grow up over the years and understand it better than almost anyone.
+                  Every client is unique to us. 
+                  We will customize the products to best suit your workflows.
                 </p>
 
               </div>
@@ -380,71 +387,6 @@
 
           </div>
           <div class="col-12 col-md-5 col-lg-6">
-
-            <div class="w-md-150 w-lg-130 position-relative" data-aos="fade-left">
-
-              <!-- Image -->
-              <div class="img-skewed img-skewed-left">
-
-                <!-- Image -->
-                <img src="assets/img/ormahealth-diagram-bgwhite.png" class="screenshot img-fluid img-skewed-item" alt="...">
-
-              </div>
-
-            </div>
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
-
-    <!-- SHAPE
-    ================================================== -->
-    <div class="position-relative mt-n8">
-      <div class="shape shape-bottom shape-fluid-x svg-shim text-gray-200">
-        <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>
-      </div>
-    </div>
-
-    <!-- PROCESS
-    ================================================== -->
-    <section class="pt-12 pt-md-13 bg-gray-200">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-10 col-lg-8 text-center">
-
-            <!-- Heading -->
-            <h1>
-              How it works.
-            </h1>
-
-            <!-- Text -->
-            <p class="font-size-lg text-muted mb-7 mb-md-9">
-              [TBD] We dont' like to brag, but we don't mind letting our customers do it for us. Here are a few nice things folks have said about our themes over the years.
-            </p>
-
-          </div>
-        </div> <!-- / .row -->
-        <div class="row align-items-center justify-content-between">
-          <div class="col-12 col-md-6">
-            
-            <!-- Preheading -->
-            <h6 class="text-uppercase text-primary font-weight-bold">
-              Process
-            </h6>
-
-            <!-- Heading -->
-            <h2>
-              Setting up your RPM/Telehealth solution has never been easier.
-            </h2>
-
-            <!-- Text -->
-            <p class="lead text-muted mb-6 mb-md-0">
-              We keep everything as simple as possible for you and your patients. 
-            </p>
-
-          </div>
-          <div class="col-12 col-md-6 col-xl-5">
 
             <div class="row no-gutters">
               <div class="col-4">
@@ -474,6 +416,74 @@
             </div> <!-- / .row -->
 
           </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- SHAPE
+    ================================================== -->
+    <div class="position-relative mt-n8">
+      <div class="shape shape-bottom shape-fluid-x svg-shim text-gray-200">
+        <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>
+      </div>
+    </div>
+
+    <!-- PROCESS
+    ================================================== -->
+    <section class="pt-12 pt-md-13 bg-gray-200" id="solutions">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8 text-center">
+
+            <!-- Heading -->
+            <h1>
+              How it works.
+            </h1>
+
+            <!-- Text -->
+            <p class="font-size-lg text-muted mb-7 mb-md-9">
+              Technology should make your life easier, not more difficult.
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row align-items-center justify-content-between">
+          <div class="col-12 col-md-6">
+            
+            <!-- Preheading -->
+            <h6 class="text-uppercase text-primary font-weight-bold">
+              Process
+            </h6>
+
+            <!-- Heading -->
+            <h2>
+              Setting up your RPM/Telehealth solution has never been easier.
+            </h2>
+
+            <!-- Text -->
+            <p class="lead text-muted mb-6 mb-md-0">
+              We keep everything as simple as possible for you and your patients. <br/>
+              The moment you sign up for Orma Health, 
+              you can immediately start enrolling your patients to the RPM/Telehealth program:
+            </p>
+
+          </div>
+          <div class="col-12 col-md-6 col-xl-6">
+
+            <div class="w-md-150 w-lg-130 position-relative" data-aos="fade-left">
+
+              <!-- Image -->
+              <div class="img-skewed img-skewed-left">
+
+                <!-- Image -->
+                <img src="assets/img/ormahealth-diagram-bgwhite.png" class="screenshot img-fluid img-skewed-item" alt="...">
+
+              </div>
+
+            </div>
+
+          </div>
+
         </div> <!-- / .row -->
       </div> <!-- / .container -->
     </section>
@@ -510,12 +520,12 @@
                 </div>
                 <!-- Heading -->
                 <h3>
-                  Enroll Patients
+                  Enroll patients
                 </h3>
 
                 <!-- Text -->
                 <p class="text-muted mb-6 mb-md-0">
-                  [TBD] Fill out our standardized application on our platform. Most applicants finish in under an hour.
+                  Enroll your patients using our provider portal, or send us a list of patients you want to enroll.
                 </p>
 
               </div>
@@ -549,12 +559,13 @@
                 </div>
                 <!-- Heading -->
                 <h3>
-                  Patients receive Devices
+                  Patients receive devices
                 </h3>
 
                 <!-- Text -->
                 <p class="text-muted mb-6 mb-md-0">
-                  [TBD] We'll immediately match you with any relevant openings and you get to pick which ones you're interested in.
+                  We send the devices to patients.
+                  The devices are all set-up, so patients can use the devices right away.
                 </p>
 
               </div>
@@ -584,12 +595,12 @@
 
                 <!-- Heading -->
                 <h3>
-                  Monitor Readings
+                  Monitor readings
                 </h3>
 
                 <!-- Text -->
                 <p class="text-muted mb-0">
-                  [TBD] After 3 days all of your offers will arrive and you will have another 7 days to select your new company.
+                  As patients use their devices, the device readings are real-time updated in your provider dashboard. 
                 </p>
 
               </div>
@@ -623,7 +634,7 @@
 
                 <!-- Text -->
                 <p class="text-muted mb-0">
-                  [TBD] After 3 days all of your offers will arrive and you will have another 7 days to select your new company.
+                  You can communicate with your patients via secure text messages and video calls through our platform.
                 </p>
 
               </div>
@@ -635,7 +646,7 @@
 
     <!-- STATS
     ================================================== -->
-    <section class="pt-8 pt-md-11 bg-gray-200">
+    <section class="pt-8 pt-md-11 bg-gray-200" id="services">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12 col-md-5 col-lg-6 order-md-2">
@@ -652,12 +663,13 @@
             <!-- Heading -->
             <h2>
               Stay focused on your business. <br>
-              <span class="text-primary">Let us handle the dirty work</span>.
+              <span class="text-primary">Let us handle the tedious work</span>.
             </h2>
 
             <!-- Text -->
             <p class="font-size-lg text-gray-700 mb-6">
-              [TBD] You have a business to run. Stop worring about cross-browser bugs, designing new pages, keeping your components up to date. Let us do that for you.
+              Your and your staffs' time is precious. 
+              We will assist your patient outreach, medication adherence, risk analytics, and reporting activities at your convenience.
             </p>
 
             <!-- Stats -->
@@ -683,10 +695,10 @@
               <div class="border-left border-gray-300"></div>
               <div class="pl-5">
                 <h3 class="mb-0">
-                  <span data-toggle="countup" data-from="0" data-to="100" data-aos data-aos-id="countup:in"></span>k+
+                  <span data-toggle="countup" data-from="0" data-to="10" data-aos data-aos-id="countup:in"></span>+
                 </h3>
                 <p class="text-gray-700 mb-0">
-                  Sales
+                  Analytics Libraries
                 </p>
               </div>
             </div>
@@ -710,7 +722,8 @@
 
             <!-- Text -->
             <p class="lead text-gray-700">
-              [TBD] All types of businesses need access to development resources, so we give you the option to decide how much you need to use.
+              We are here to help you make more money.<br/>
+              That's the most important value to us.
             </p>
 
             <!-- Form -->
@@ -727,6 +740,7 @@
                 <label class="custom-control-label" for="billingSwitch"></label>
               </div>
 
+
               <!-- Label -->
               <span class="text-muted">
                 Monthly
@@ -735,6 +749,8 @@
             </form>
 
           </div>
+          
+
         </div> <!-- / .row -->
         <div class="row align-items-center no-gutters">
           <div class="col-12 col-md-6">
@@ -754,16 +770,21 @@
                       </span>
                     </div>
 
+                    <!-- Text -->
+                    <p class="text-center text-muted mb-2">
+                      You earn
+                    </p>
+
                     <!-- Price -->
                     <div class="d-flex justify-content-center">
                       <span class="h2 mb-0 mt-2">$</span>
-                      <span class="price display-2 mb-0" data-annual="29" data-monthly="49">29</span>
-                      <span class="h2 align-self-end mb-1">/mo</span>
+                      <span class="price display-2 mb-0" data-annual="150000" data-monthly="12500">150,000</span>
+                      <span class="h2 align-self-end mb-1" id="billing-unit">/yr</span>
                     </div>
 
                     <!-- Text -->
                     <p class="text-center text-muted mb-6 mb-md-8">
-                      per seat
+                      per 100 patient
                     </p>
 
                     <!-- Features -->
@@ -776,7 +797,7 @@
 
                       <!-- Text -->
                       <p>
-                        Rich, responsive landing pages
+                        $35 per patient per month for devices and platform
                       </p>
 
                     </div>
@@ -789,7 +810,7 @@
 
                       <!-- Text -->
                       <p>
-                        100+ styled components
+                        Unlimited text messages with patients
                       </p>
 
                     </div>
@@ -802,7 +823,7 @@
 
                       <!-- Text -->
                       <p>
-                        Flexible, simple license
+                        Unlimited Telehealth sessions
                       </p>
 
                     </div>
@@ -815,23 +836,11 @@
 
                       <!-- Text -->
                       <p>
-                        Speedy build tooling
+                       Unlimited number of provider accounts
                       </p>
 
                     </div>
-                    <div class="d-flex">
-
-                      <!-- Check -->
-                      <div class="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
-                        <i class="fe fe-check"></i>
-                      </div>
-
-                      <!-- Text -->
-                      <p class="mb-0">
-                        6 months free support included
-                      </p>
-
-                    </div>
+                    
 
                   </div>
                 </div> <!-- / .row -->
@@ -858,13 +867,14 @@
                     <!-- Badge -->
                     <p class="text-center mb-8 mb-md-11">
                       <span class="badge badge-pill badge-primary-soft">
-                        <span class="h6 font-weight-bold text-uppercase">Enterprise</span>
+                        <span class="h6 font-weight-bold text-uppercase">Service Plus</span>
                       </span>
                     </p>
 
                     <!-- Text -->
                     <p class="lead text-center text-muted mb-0 mb-md-10">
-                      We offer variable pricing with discounts for larger organizations. Get in touch with us and we’ll figure out something that works for everyone.
+                      We will assist your patient outreach, medication adherence, risk analytics, and reporting activities at your convenience.
+                      Get in touch with us and we will figure out something that works for everyone.
                     </p>
 
                   </div>
@@ -893,7 +903,7 @@
 
     <!-- FAQ
     ================================================== -->
-    <section class="pt-15 bg-dark">
+    <section class="pt-15 bg-dark" id="faqs">
       <div class="container pt-8 pt-md-11">
         <div class="row">
           <div class="col-12 col-md-6">
@@ -962,7 +972,7 @@
 
                 <!-- Heading -->
                 <h4 class="text-white">
-                  Do patients need to configure devices?
+                  Do patients need to configure the devices?
                 </h4>
 
                 <!-- Text -->
@@ -1177,12 +1187,16 @@
     <script src="./assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
     <script src="./assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
 
-    <!-- Map -->
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-
     <!-- Theme JS -->
     <script src="./assets/js/theme.min.js"></script>
-
-
+    <script>
+      (function() {
+          var toggle = document.querySelector('[data-toggle="price"]');
+          toggle.addEventListener('change', function(e) {
+            if(e.target.checked){ $("#billing-unit").html("/mo"); }
+            else{ $("#billing-unit").html("/yr"); }
+          })
+        })();
+    </script>
   </body>
 </html>
