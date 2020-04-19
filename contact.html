@@ -5,6 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164029911-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164029911-1');
+    </script>
+
     <!-- Libs CSS -->
     <link rel="stylesheet" href="./assets/fonts/Feather/feather.css">
     <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css">
@@ -32,7 +42,7 @@
           <div class="col-12 col-md-8 col-lg-6 py-6 py-md-8">
             
             <!-- Heading -->
-            <a href="">
+            <a href="/">
               <img src="./assets/img/logo.png" class="img-fluid" alt="...">
             </a>
 
@@ -50,12 +60,18 @@
                 </label>
                 <input type="text" class="form-control" id="name" placeholder="Your Name">
               </div>
+              <div class="alert alert-danger" role="alert" id="nameAlert" style="display: none">
+                Please fill out your name.
+              </div>
 
               <div class="form-group">
                 <label for="email">
                   Email
                 </label>
                 <input type="email" class="form-control" id="email" placeholder="name@address.com">
+              </div>
+              <div class="alert alert-danger" role="alert" id="emailAlert" style="display: none">
+                Please fill out a valid email address.
               </div>
 
               <div class="form-group mb-5">
@@ -64,12 +80,18 @@
                 </label>
                 <input type="tel" class="form-control" id="phone" placeholder="123-546-7890">
               </div>
+              <div class="alert alert-danger" role="alert" id="phoneAlert" style="display: none">
+                Please fill out a valid phone number.
+              </div>
 
               <div class="form-group mb-5">
                 <label for="company">
                   Company
                 </label>
                 <input type="text" class="form-control" id="company" placeholder="Company Name">
+              </div>
+              <div class="alert alert-danger" role="alert" id="companyAlert" style="display: none">
+                Please fill out your company name.
               </div>
 
               <!-- Submit -->
@@ -98,20 +120,119 @@
     <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+      function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+      }
+
+      function validatePhone(phone){
+        return true;
+      }
+
+      function formatPhone(input, phone){
+
+        let phoneNew = '';
+        if (phone.length > input.length){ // delete operation
+          return input;
+        } else if(!isNaN(input[input.length-1])) {
+          phoneNew = input.substring(0,3);
+          if (phoneNew.length === 3) { phoneNew += '-'; }
+          if (input.length > 4){ phoneNew += input.substring(4,7); }
+          if (phoneNew.length === 7) { phoneNew += '-'; }
+          if (input.length > 8){ phoneNew += input.substring(8,12); }
+          return phoneNew;
+        } else{
+          return phone;
+        }
+      }
+
       let searchParams = new URLSearchParams(window.location.search);
       let param = searchParams.get("action");
-      let actions ={demo: "Schedule a Demo",
-                  sales: "Contact Sales"};
+      let actions ={demo: "Schedule a demo",
+                  sales: "Contact sales",
+                  brochure: "Download a brochure",
+                  general: "General contact"};
+      let name = "";
+      let email = "";
+      let phone = "";
+      let company = "";
+
+
       let submit = actions[param] || "Submit";
       $("#submit").html(submit);
+      $("#nameAlert").hide();
+      $("#emailAlert").hide();
+      $("#phoneAlert").hide();
+      $("#companyAlert").hide();                  
+
+      $("#name").on("input", ()=>{
+        name = $("#name").val();
+        if (name===0){
+          $("#nameAlert").show();
+        }else{
+          $("#nameAlert").hide();
+        }
+      });
+
+      $("#company").on("input", ()=>{
+        company = $("#company").val();
+        if (company===0){
+          $("#companyAlert").show();
+        }else{
+          $("#companyAlert").hide();
+        }
+      });
+
+      // check email
+      $("#email").on("input", ()=>{
+        email = $("#email").val();
+        if (validateEmail(email)){
+          $("#emailAlert").hide();
+        }else{
+          $("#emailAlert").show();
+        }
+      });
+
+      $("#phone").on("input", () => {
+        phone = formatPhone($("#phone").val(), phone);
+        $("#phone").val(phone);
+        if (phone.length===12){
+          $("#phoneAlert").hide();
+        }else{
+          $("#phoneAlert").show();
+        }
+      })
+
+      // check phone
 
       $("#submit").on("click", (e)=>{
         e.preventDefault();
-        $("#contactForms").hide();
-        $("#thankyou").show();     
 
-        // send an email to me.
+        if (name.length === 0){
+          $("#nameAlert").show();
+        } else if( !validateEmail(email) ){
+          $("#emailAlert").show();
+        } else if(phone.length < 12) {
+          $("#phoneAlert").show();
+        } else if(company.length ===0 ){
+          $("#companyAlert").show(); 
+        } else{
+          // send an email
+          $("#contactForms").hide();
+          $("#thankyou").show();      
 
+          const url = "https://api.ormahealth.com/send-contact-email-from-landing";
+          const urlParams = new URLSearchParams({name: name, 
+                                          company: company,
+                                          phone: phone,
+                                          from_email: email, 
+                                          message: (actions[param] || "")})
+
+          fetch(url+"?"+urlParams)
+            .then((response) => {
+              console.log(response.json());
+            })         
+        }
       });
 
 

@@ -4,6 +4,16 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164029911-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164029911-1');
+    </script>
 
     <!-- Libs CSS -->
     <link rel="stylesheet" href="./assets/fonts/Feather/feather.css">
@@ -311,6 +321,7 @@
 
                 <!-- Form -->
                 <form>
+                  <!--
                   <div class="form-label-group">
                     <input type="text" class="form-control form-control-flush" id="cardName" placeholder="Name">
                     <label for="cardName">Name</label>
@@ -323,10 +334,11 @@
                     <input type="text" class="form-control form-control-flush" id="cardCompany" placeholder="Company">
                     <label for="cardCompany">Company</label>
                   </div>
+                -->
                   <div class="mt-6">
-                    <button class="btn btn-block btn-success lift" type="submit">
+                    <a class="btn btn-block btn-success lift" href="contact?action=brochure">
                       Download a Brochure
-                    </button>
+                    </a>
                   </div>
                 </form>
 
@@ -960,7 +972,7 @@
     <footer class="py-8 py-md-11 bg-gray-200">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-4 col-lg-3">
+          <div class="col-12 col-md-4 mb-4">
         
             <!-- Brand -->
             <img src="./assets/img/logo.png" alt="..." class="footer-brand img-fluid mb-3" style="width: 140px;">
@@ -969,8 +981,12 @@
             <p class="text-gray-700 mb-2">
               Connect healthcare.
             </p>
+            <small class="text-muted mb-2">
+              Copyright &#169; Orma Health, Inc. All Rights Reserved.
+            </small>
 
             <!-- Social -->
+            <!--
             <ul class="list-unstyled list-inline list-social mb-6">
               <li class="list-inline-item list-social-item mr-3">
                 <a href="#!" class="text-decoration-none">
@@ -991,14 +1007,12 @@
                 </a>
               </li>
             </ul>
+            -->
 
-            <small class="text-muted">
-              Copyright &#169; Orma Health, Inc. All Rights Reserved.
-            </small>
 
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3">
+          <div class="col-12 col-md-4">
         
             <!-- Heading -->
             <h6 class="font-weight-bold text-uppercase text-gray-700">
@@ -1021,7 +1035,7 @@
 
           </div>
 
-          <div class="col-6 col-md-4 offset-md-4 col-lg-3 offset-lg-0">
+          <div class="col-12 col-md-4">
         
             <!-- Heading -->
             <h6 class="font-weight-bold text-uppercase text-gray-700">
@@ -1031,6 +1045,11 @@
             <!-- List -->
             <ul class="list-unstyled text-muted mb-0">
               <li class="mb-3">
+                <a href="contact?action=general" class="text-reset">
+                  Contact
+                </a>
+              </li>
+              <li class="mb-3">
                 <a href="#!" class="text-reset">
                   Privacy Policy
                 </a>
@@ -1038,11 +1057,6 @@
               <li class="mb-3">
                 <a href="#!" class="text-reset">
                   Terms of Use
-                </a>
-              </li>
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Resources
                 </a>
               </li>
             </ul>
