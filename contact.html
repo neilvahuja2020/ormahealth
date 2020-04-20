@@ -234,9 +234,12 @@
 
           fetch(url+"?"+urlParams)
             .then((response) => {
-              console.log(response.json());
+              if (param==="brochure"){
+                window.location.href = "https://ormahealth-public.s3.amazonaws.com/orma_health_rpm_brochure_NA.pdf";
+              }
             })         
         }
+
       });
 
 
